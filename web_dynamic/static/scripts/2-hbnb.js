@@ -2,7 +2,7 @@ const checkDict = {};
 $("document").ready(function (){
   fetch("http://0.0.0.0:5001/api/v1/status/")
   .then(response => {
-    if (response.status === 200){
+    if (response.ok){
       $("#api_status").addClass("available");
     } else {
       $("#api_status").removeClass("available");
